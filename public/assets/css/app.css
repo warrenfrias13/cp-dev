@@ -1,0 +1,54 @@
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+@keyframes donut-spin {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.donut {
+  display: none;
+  border: 0.75em solid dimgray;
+  border-left-color: #ffb400;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  padding: 2em;
+  animation: donut-spin 1s linear infinite;
+  z-index:2;
+}
+
+.loading .donut {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.loading .spa {
+  opacity: 0.3;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.catechism-red{
+  color: #f35631
+}
+
+/* CSS Specific to Coda Payments Contet */
+
+.shop-content--paragraph{
+  margin: 10px 0;
+}
+
+.shop-content--badge{
+  display: inline-block;
+  margin-right: 5px;
+}
